@@ -1,0 +1,28 @@
+<%= simple_form_for @material, url: url, method: method do |f| %>
+  <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 shadow bg-white rounded mb-5">
+    <h1 class="text-xl">Produto</h1>
+    <div class='form-group my-4'>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.label :nome %>
+      </div>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.text_field :name %>
+      </div>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.label :quantidade_de_entrada %>
+      </div>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.text_field :quantity_entrance %>
+      </div>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.label :quantidade_de_saída %>
+      </div>
+      <div class='sm:col-span-3 mt-3'>
+        <%= f.text_field :quantity_exit %>
+      </div>
+    </div>
+      <div class="col-9 float-right" >
+        <%= f.button :submit, 'Salvar', class: 'btn btn-primary mb-3' %>
+      </div>
+  </div>
+<% end %>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Almox</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class=" container-fluid flex-basis" style="position: fixed; bottom: 0; left: 0;" >
+      <div class="row">
+        <div class="col-2 p-0">
+          <%= render 'shared/sidebar' %>
+        </div>
+        <div class="col-10">
+        <% flash.each do |nome, mensagem| %>
+          <%= content_tag :div, mensagem, class: nome %>
+        <% end %>
+        <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

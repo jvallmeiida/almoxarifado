@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Geral</title>
+    <div class='mb-5 mt-3'>
+      <h1>Geral</h1>
+    </div>
+  </head>
+  <body>
+    <div id="container">
+      <div class="card mt-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Total de Usuários</h5>
+          <p class="card-text"><%= "#{@users.count}" %></p>
+          <a><%= link_to 'Todos usúarios', users_path, class: 'btn btn-primary' %></a>
+        </div>
+      </div>
+      <div class="card mt-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Total de Produtos</h5>
+          <p class="card-text"><%= "#{@materials.count}" %></p>
+          <a><%= link_to 'Todos Produtos', materials_path, class: 'btn btn-primary' %></a>
+        </div>
+      </div>
+      <div class="card mt-3 mb-3" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Movimentação de produto</h5>
+          <p class="card-text"><%= "#{@logs.count}" %></p>
+          <a><%= link_to 'Entrada/Saída de produto', material_logs_path, class: 'btn btn-primary mb-3' %></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

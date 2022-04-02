@@ -1,0 +1,47 @@
+
+<div class="mb-5 mt-3">
+  <h1>Produtos</h1>
+
+<div>
+<% if current_user.administrador? %>
+  <div style="float: right;">
+    <%= link_to 'Inserir novo produto', new_material_path, class: 'btn btn-primary mr-3' %>
+  </div>
+<% end %>
+</div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th><%= @materials.human_attribute_name(:criado_em) %></th>
+        <th><%= @materials.human_attribute_name(:nome) %></th>
+        <th><%= @materials.human_attribute_name(:quantidade) %></th>
+        <th colspan="5"></th>
+      </tr>
+    </thead>
+
+    <tbody class="col-span-12">
+    <% if @materials.any? %>
+      <% @materials.each do |material| %>
+        <tr>
+          <td><%= material.created_at.strftime('%d/%m/%Y') %></td>
+          <td><%= material.name || '-' %></td>
+          <td><%= material.quantity %></td>
+          <% if material.material_logs.present? %>
+            <td><%= link_to 'Movimentações', material_material_logs_path(material) %></td>
+          <% else %>
+            <td align="center"> Sem movimentações </td>
+          <% end %>
+          <td><%= link_to 'Entrada/Saída', edit_material_path(material) %></td>
+          <% unless material.material_logs.present? %>
+            <td><%= link_to 'Apagar', material_path(material), method: :delete %></td>
+          <% else %>
+            <td></td>
+          <% end %>
+        </tr>
+      <% end %>
+    <% else%>
+      <td> Sem materiais no estoque! </td>
+    <% end %>
+    </tbody>
+  </table>
+</div>

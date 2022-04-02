@@ -1,0 +1,33 @@
+<%= simple_form_for @user, url: user_path, method: :put do |f| %>
+  <form class="p-3 mt-3 col-10">
+    <div class="max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8 shadow bg-white rounded mb-5">
+      <h1 class="text-xl">Editar Usuário</h1>
+      <div class='form-group my-4'>
+        <div class='sm:col-span-3 mt-3'>
+          <%= f.label :Nome %>
+          <% if current_user.administrador? %>
+            <div class="float-right m-3", style="float: right;">
+              <%= f.select :role, ['usuario', 'suporte', 'administrador'] %>
+            </div>
+          <% end %>
+        </div>
+        <div class='sm:col-span-3'>
+          <%= f.text_field :first_name %>
+        </div>
+         <div class='sm:col-span-3 mt-3'>
+          <%= f.label :Sobrenome %>
+        </div>
+        <div class='sm:col-span-3'>
+          <%= f.text_field :last_name %>
+        </div>
+         <div class='sm:col-span-3 mt-3'>
+          <%= f.label :Email %>
+        </div>
+        <div class='sm:col-span-3'>
+          <%= f.text_field :email %>
+        </div>
+        <div>
+          <%= f.button :submit, 'Salvar', class: 'btn btn-primary mt-3 mb-3' %>
+        </div>
+  </form>
+<% end %>
