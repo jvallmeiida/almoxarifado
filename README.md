@@ -17,3 +17,12 @@ O que eu gostaria de implementar:
 - BootStrap 5.0
 - Devise
 - Mysql
+
+#### Como rodar a aplicação:
+
+- Primeiramente clone a aplicação
+- Certifique-se se as versões da aplicação estão instaladas em seu computador
+- Rode *rails db:create* / *rails db:migrate*
+      ou use *mysql -uroot* para criar seu banco
+- Rode *bundle install*
+- Iniciei a aplicação com Rails S
