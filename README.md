@@ -1,24 +1,19 @@
-# README
+# Aplicativo sistema de Almoxarifado
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A aplicação contempla:
+- CRUD de Produtos(materiais)
+- Sistema de login usuário(email, senha)
+- Funciona somente em horário comercial retirada de produtos
+- Produto só pode ser apagado se não tiver movimentações de estoque
 
-Things you may want to cover:
+O que eu gostaria de implementar:
+- Datatable
+- Botão para desativar o usuário
 
-* Ruby version
+#### Tecnologias usadas:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Rails 5.2.7
+- Ruby 2.6.1
+- BootStrap 5.0
+- Devise
+- Mysql
