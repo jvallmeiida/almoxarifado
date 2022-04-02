@@ -25,4 +25,4 @@ O que eu gostaria de implementar:
 - Rode *rails db:create* / *rails db:migrate*
       ou use *mysql -uroot* para criar seu banco
 - Rode *bundle install*
-- Iniciei a aplicação com Rails S
+- Iniciei a aplicação com *rails server*
