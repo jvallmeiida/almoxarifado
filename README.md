@@ -9,6 +9,8 @@ A aplicação contempla:
 O que eu gostaria de implementar:
 - Datatable
 - Botão para desativar o usuário
+- Gem papertrail para gerenciar meus logs (Criei um service de logs simples para mostrar meus conceitos sobre service)
+- Adicionar Gem pundit para definir meus scopes de acesso.
 
 #### Tecnologias usadas:
 
